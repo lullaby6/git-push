@@ -20,4 +20,4 @@ if __name__ == '__main__':
         res = os.popen(command).read()
         print(res)
     except Exception as e:
-        print(e)
+        print(f'ERROR: {e}')

@@ -14,7 +14,7 @@ A fast method to push!
 On your shell:
 
 ```bash
-gitpsuh -c 'first commit!' -b master
+gitpush -c 'first commit!' -b master
 ```
 
 ### Options

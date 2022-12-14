@@ -1,4 +1,4 @@
-import sys, os, argparse
+import os, argparse
 
 path = os.getcwd()
 

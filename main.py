@@ -14,5 +14,4 @@ if __name__ == '__main__':
 
     command = f'cd "{path}" && git add . && git commit -m "{args.commit}" && git push origin {args.branch}'
 
-    print(command)
     os.system(command)

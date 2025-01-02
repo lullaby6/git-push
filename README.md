@@ -21,7 +21,7 @@ gp -c 'first commit!' -b master
 ```bash
   -h, --help            show this help message and exit
   --commit COMMIT, -c COMMIT
-                        Commit (default: "commit with gitpush!")
+                        Commit (default: "commit")
   --branch BRANCH, -b BRANCH
-                        Branch name (default: main)
+                        Branch name
 ```

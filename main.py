@@ -7,14 +7,16 @@ parser = argparse.ArgumentParser(
     description='A fast method to push'
 )
 
-parser.add_argument('--commit', '-c', help='Commit (default: "commit with gitpush!")', default='commit with gitpush!')
-parser.add_argument('--branch', '-b', help='Branch name (default: main)', default='main')
+parser.add_argument('--commit', '-c', help='Commit (default: "commit")', default='commit')
+parser.add_argument('--branch', '-b', help='Branch name')
 
 if __name__ == '__main__':
     try:
         args = parser.parse_args()
 
-        command = f'cd "{path}" && git add . && git commit -m "{args.commit}" && git push origin {args.branch}'
+        branch = f'origin {args.branch}' if args.branch != None else ''
+
+        command = f'cd "{path}" && git add . && git commit -m "{args.commit}" && git push {branch}'
 
         print(command)
         res = os.popen(command).read()

@@ -1,4 +1,5 @@
-import os, argparse
+import os
+import argparse
 
 path = os.getcwd()
 
@@ -7,18 +8,24 @@ parser = argparse.ArgumentParser(
     description='A fast method to push'
 )
 
-parser.add_argument('--commit', '-c', help='Commit (default: "commit")', default='commit')
-parser.add_argument('--branch', '-b', help='Branch name')
+parser.add_argument('--commit', '-c', help='Commit message (default: "commit")', default='commit')
+parser.add_argument('--branch', '-b', help='Branch name (if not specified, only "git push" is executed)')
+parser.add_argument('--upstream', '-u', help='Set upstream flag', action='store_true')
 
 if __name__ == '__main__':
     try:
         args = parser.parse_args()
 
-        branch = f'origin {args.branch}' if args.branch != None else ''
+        commit = f'git commit -m "{args.commit}"'
+        push = 'git push'
 
-        command = f'cd "{path}" && git add . && git commit -m "{args.commit}" && git push {branch}'
+        if args.branch:
+            upstream_flag = '-u' if args.upstream else ''
+            push = f'git push {upstream_flag} origin {args.branch}'
 
-        print(command)
+        command = f'cd "{path}" && git add . && {commit} && {push}'
+
+        print(f'Executing command: {command}')
         res = os.popen(command).read()
         print(res)
 

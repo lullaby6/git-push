@@ -8,13 +8,13 @@ A fast method to push!
 
 ## Installation (Windows)
 
-[Download](https://github.com/LucianoBrumer/GitPush/releases/download/v1.0.0/gitpush.exe) and move the .exe file into "C:\Windows"
+[Download](https://github.com/LucianoBrumer/GitPush/releases/download/v1.0.1/gp.exe) and move the .exe file into "C:\Windows"
 
 ## Usage
 On your shell:
 
 ```bash
-gitpush -c 'first commit!' -b master
+gp -c 'first commit!' -b master
 ```
 
 ### Options

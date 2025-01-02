@@ -19,5 +19,7 @@ if __name__ == '__main__':
         print(command)
         res = os.popen(command).read()
         print(res)
+
+        print('Pushed to remote successfully!')
     except Exception as e:
         print(f'ERROR: {e}')

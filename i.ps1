@@ -1,4 +1,6 @@
-$installPath = "$env:LOCALAPPDATA\GitPush\bin"
+Write-Host "Starting GitPush installation..."
+
+$installPath = "$env:LOCALAPPDATA\gp\bin"
 
 if (!(Test-Path $installPath)) {
     New-Item -ItemType Directory -Path $installPath -Force

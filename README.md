@@ -15,7 +15,7 @@ A fast method to push!
 #### Power Shell
 
 ```bash
-powershell -c "irm https://github.com/lullaby6/GitPush/releases/download/i/i.ps1 | iex"
+powershell -c "irm https://rawcdn.githack.com/lullaby6/GitPush/c06744356cd2f8b57c542ed845894951de3354d5/i.ps1 | iex"
 ```
 
 ## Usage

@@ -8,12 +8,14 @@ A fast method to push!
 
 ## Installation (Windows)
 
-[Download](https://github.com/lullaby6/git-push/releases/download/v1.0.2/gp.exe) and move the .exe file into "C:\Windows"
+#### Manual
+
+[Download](https://github.com/lullaby6/GitPush/releases/download/v1.0.2/gp.exe) and move the .exe file into "C:\Windows"
 
 #### Power Shell
 
 ```bash
-powershell -c "irm bun.sh/install.ps1 | iex"
+powershell -c "irm https://github.com/lullaby6/GitPush/releases/download/install/install.ps1 | iex"
 ```
 
 ## Usage

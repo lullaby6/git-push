@@ -1,5 +1,6 @@
 import os
 import argparse
+import subprocess
 
 path = os.getcwd()
 
@@ -26,8 +27,14 @@ if __name__ == '__main__':
         command = f'cd "{path}" && git add . && {commit} && {push}'
 
         print(f'Executing command: {command}')
-        res = os.popen(command).read()
-        print(res)
+        # result = os.popen(command).read()
+        result = subprocess.run(command, shell=True)
+        if result.returncode == 0:
+            print('Pushed to remote successfully!')
+            print(result.stdout.decode('utf-8'))
+        else:
+            print('Failed to push to remote.')
+            print(result.stderr.decode('utf-8'))
 
         print('Pushed to remote successfully!')
     except Exception as e:

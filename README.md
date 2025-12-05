@@ -15,10 +15,11 @@ A fast method to push!
 #### Power Shell
 
 ```bash
-powershell -c "irm https://rawcdn.githack.com/lullaby6/GitPush/c06744356cd2f8b57c542ed845894951de3354d5/i.ps1 | iex"
+powershell -ExecutionPolicy Bypass -c "iwr https://rawcdn.githack.com/lullaby6/GitPush/c06744356cd2f8b57c542ed845894951de3354d5/i.ps1 -UseBasicParsing | iex"
 ```
 
 ## Usage
+
 On your shell:
 
 ```bash
@@ -42,6 +43,7 @@ gp -c 'initial commit' -b master -u
 This will execute `git push -u origin master`.
 
 ### Options
+
 ```bash
   -h, --help            show this help message and exit
   --commit COMMIT, -c COMMIT
@@ -50,4 +52,3 @@ This will execute `git push -u origin master`.
                         Branch name (if not specified, only "git push" is executed)
   --upstream, -u        Set upstream flag
 ```
-
